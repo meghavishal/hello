@@ -1,0 +1,84 @@
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git init
+Initialized empty Git repository in C:/Users/User/Desktop/Megha/.git/
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git config --global user.name "meghavishal"
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git config --global user.email "megha.phadale1990@gmail.com"
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git add .
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git commit -m "uploading"
+[master (root-commit) 6d6150b] uploading
+ 12 files changed, 350 insertions(+)
+ create mode 100644 eight.html
+ create mode 100644 five.html
+ create mode 100644 four.html
+ create mode 100644 index.html
+ create mode 100644 information.html
+ create mode 100644 ninw.html
+ create mode 100644 one.html
+ create mode 100644 seven.html
+ create mode 100644 six.html
+ create mode 100644 ten.html
+ create mode 100644 three.html
+ create mode 100644 two.html
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git remote origin
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--m                                                                                                                irror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)..                                                                                                                .]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git remote add origin https://github.com/meghavishal/hello.git
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$ git push -u origin master
+Username for 'https://github.com': meghavishal
+Counting objects: 14, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 4.11 KiB | 420.00 KiB/s, done.
+Total 14 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/meghavishal/hello.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+User@User-PC MINGW64 ~/Desktop/Megha (master)
+$
