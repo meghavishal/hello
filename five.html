@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body ng-init="record=false">
+<div ng-hide="record">Test1</div>
+<div ng-show="record">Test2</div>
+<input type="checkbox" ng-model="record">
+<input type="password" name="" ng-model="hello" ng-hide="record">
+<input type="text" name="" ng-model="hello" ng-show="record">
+
+
+</body>
+</html>

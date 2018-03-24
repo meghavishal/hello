@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<title>
+		
+	</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body ng-init="radData=1">
+<div class="container">
+	<input type="radio" name="rad" ng-model="radData" value="1" ng-checked=true>Login
+	<input type="radio" name="rad" ng-model="radData" value="2">Register
+	<input type="radio" name="rad" ng-model="radData" value="3">Forgot Pass
+	<br/>
+
+	<div ng-if="radData==1">Login DIV</div>
+	<div ng-if="radData==2">Register DIV</div>
+	<div ng-if="radData==3">Forgot DIV</div>
+
+</div>
+
+</body> 
+</html>

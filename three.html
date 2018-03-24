@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body ng-init="data=[{name:'ajay',salary:1000},{name:'sujay',salary:1200},{name:'akshay',salary:1000},{name:'sugar',salary:1700}]">
+
+<div class="container">
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<td>Salary</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" name="" ng-model="serachData.name">
+			</td>
+
+			<td>
+				<input type="text" name="" ng-model="serachData.salary">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<select ng-model="orderData">
+					<option value="salary">asc</option>
+					<option value="-salary">desc</option>
+
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<select ng-model="limitData">
+					<option value="2">2</option>
+					<option value="4">4</option>
+
+				</select>
+			</td>
+		</tr>
+		<tr ng-repeat="answer in data | filter:serachData | orderBy:orderData | limitTo: limitData">
+			<td>{{answer.name}}</td>
+			<td>{{answer.salary}}</td>
+	</tr>
+	</table>
+
+</div>
+
+</body>
+</html>

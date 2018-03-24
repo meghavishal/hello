@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="moduleapp">
+<head>
+	<title>one way binding or controller property access through object</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script type="text/javascript">
+		var app= angular.module("moduleapp",[]);
+		app.controller("ctrl1",function(){
+			this.name="megha";
+			this.age= 28;
+		});
+
+	</script>
+</head>
+<body>
+	<div ng-controller="ctrl1 as c1">
+		{{c1}}
+		{{c1.name}}
+		{{c1.age}}
+	</div>
+
+</body>
+</html>

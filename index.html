@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+<div ng-init="data=[100,200,300]">
+	{{data}}
+	 <ul>
+		<li>{{data[0]}}</li>
+		<li>{{data[1]}}</li>
+		<li>{{data[2]}}</li>
+
+	</ul>
+
+	<ul>
+		<li ng-repeat="ans in data">
+			{{ans}}
+		</li>
+	</ul>
+	<ul>
+		<li ng-repeat="(key,ans) in data">
+			{{key + "==" + ans}}
+		</li>
+	</ul> 
+</div>
+</body>
+</html>

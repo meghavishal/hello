@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+    <title>
+        
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+    <div ng-init="data=['adidas','puma','killer jeams','reebok']">
+        <input type="text" ng-model="searchBrand">
+        <ul>
+            <li ng-repeat="ans in data | filter:searchBrand | limitTo:2">
+                {{ans}}
+                
+            </li>
+                
+        </ul> 
+    </div>
+
+</body>
+</html>

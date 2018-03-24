@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="moduleapp">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script type="text/javascript">
+		app = angular.module("moduleapp",[]);
+		app.controller("ctrl1",function(){
+
+		});
+		app.controller("ctrl2",function(){
+			
+		});
+	</script>
+
+</head>
+<body>
+	<div ng-controller="ctrl1" ng-init="data=100">
+		{{data}}
+	</div>
+	<div ng-controller="ctrl2" ng-init="data=1100">
+		{{data}}
+	</div>
+
+</body>
+</html>

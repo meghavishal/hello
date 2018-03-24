@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script type="text/javascript">
+		//console.log(angular);
+		 var app = angular.module("myApp",[]);
+		 app.controller("ctrl1",function($scope,$http){
+
+			$scope.getData = function(){
+				console.log($http);
+				$http.get("http://localhost/aa/test.php").then(
+					function(response){
+						//console.log(response);
+						$scope.finalmsg = response.data;
+					},function(errMsg){
+						console.log(errmsg);
+					}
+					)
+			}
+		});
+	</script>
+
+</head>
+<body>
+<div ng-controller="ctrl1">
+	<input type="button" value="Enter" ng-click-"getData()">
+	{{finalmsg}}
+</div>
+
+</body>
+</html>

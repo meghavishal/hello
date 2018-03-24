@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>scope object | two way binding | glue object</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		app.controller("ctrl1",function($scope){
+			$scope.name="megha";
+			$scope.age=20;
+		});
+	</script>
+</head>
+<body>
+<div ng-controller="ctrl1" >
+	{{name}}
+	{{age}}
+</div>
+</body>
+</html>

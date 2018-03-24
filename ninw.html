@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		app.controller("ctrl1",function($scope){
+			// $scope.err = "Helloss";
+			$scope.check = function(){
+				 // console.log($scope.x1);
+				// alert(123);
+				if(!$scope.x1){
+					$scope.err = "enter no 1";
+				}
+				else if($scope.x2===undefined)
+				{
+					$scope.err = "enter no 2";
+				}
+				else{
+					$scope.err = parseInt($scope.x1) + Number($scope.x2);
+					//we can use parseInt as well as number method to convert into integer 
+				}
+			}
+
+		});
+	</script>
+</head>
+<body>
+	<div ng-controller="ctrl1">
+		<ul>
+			<li>
+				<input type="text" name="" ng-model="x1">
+			</li>
+
+			<li>
+				<input type="text" name="" ng-model="x2">
+			</li>
+
+			<li>
+				<input type="button"  value="check" ng-click="check()" >
+			</li>
+
+			<li ng-bind="err">
+				
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
